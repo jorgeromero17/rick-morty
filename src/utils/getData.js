@@ -1,7 +1,7 @@
 const API = "https://rickandmortyapi.com/api/character";
 
-const getData = async (id) => {
-  const apiUrl = id ? `${API}/${id}` : API;
+const getData = async (id, page = 1) => {
+  const apiUrl = id ? `${API}/${id}` : `${API}?page=${page}`;
   try {
     const response = await fetch(apiUrl);
     const data = await response.json(); //convertimos a JSON

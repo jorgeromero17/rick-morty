@@ -1,8 +1,12 @@
 import getHash from "../utils/getHash";
 import getData from "../utils/getData";
 
-const Character = async () => {
-  const id = getHash();
+const Character = async (id) => {
+  if (!id) {
+    window.location.hash = "#";
+    return;
+  }
+
   const character = await getData(id);
 
   const view = `

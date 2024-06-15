@@ -7,7 +7,7 @@ import resolveRoutes from "../utils/resolveRoutes";
 
 const routes = {
   "/": Home,
-  "/:id": Character,
+  "/character": Character,
 };
 
 const router = async () => {
@@ -16,11 +16,11 @@ const router = async () => {
 
   header.innerHTML = await Header();
 
-  let hash = getHash();
-  let route = await resolveRoutes(hash);
+  let { route, id } = getHash();
+  let resolvedRoute = await resolveRoutes(route);
 
-  let render = routes[route] ? routes[route] : Error404;
-  content.innerHTML = await render();
+  let render = routes[resolvedRoute] ? routes[resolvedRoute] : Error404;
+  content.innerHTML = await render(id);
 };
 
 export default router;
