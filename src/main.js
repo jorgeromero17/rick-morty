@@ -1,8 +1,4 @@
 import "./css/style.css";
-import Home from "./pages/Home";
+import router from "./routes";
 
-document.querySelector("#app").innerHTML = `
-  <div>
-    ${Home()}
-  </div>
-`;
+window.addEventListener("load", router);
