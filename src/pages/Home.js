@@ -16,18 +16,20 @@ const Home = async (page = 1) => {
       `
         )
         .join("")}
-      <div class="Pagination">
+    </div>
+    <div class="Pagination">
       ${
         characters.info.prev
-          ? `<a href="#/page/${page - 1}"><button>Previous</button></a>`
+          ? `<a href="#/page/${
+              page - 1
+            }"><button class="Prev-button"> << </button></a>`
           : ""
       }
       ${
         characters.info.next
-          ? `<a href="#/page/${page + 1}"><button>Next</button></a>`
+          ? `<a href="#/page/${page + 1}"><button> >> </button></a>`
           : ""
       }
-    </div>
     </div>
   `;
   return view;

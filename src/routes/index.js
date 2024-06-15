@@ -20,7 +20,7 @@ const router = async () => {
   let resolvedRoute = await resolveRoutes(route);
 
   let render = routes[resolvedRoute] ? routes[resolvedRoute] : Error404;
-  content.innerHTML = await render(id);
+  content.innerHTML = await render(parseInt(id, 10));
 };
 
 export default router;
