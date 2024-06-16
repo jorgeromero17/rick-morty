@@ -9,8 +9,8 @@ const Header = () => {
         </h1>
       </div>
       <div class="Header-nav">
-        <a href="#/about/">
-          About
+        <a target="_blank"  href="https://github.com/jorgeromero17/rick-morty.git">
+          <img src="/svgs/github.svg" alt="github" width="30px">
         </a>
       </div>
     </div>
