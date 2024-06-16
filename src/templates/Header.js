@@ -1,3 +1,5 @@
+import githubIcon from "/svgs/github.svg";
+
 const Header = () => {
   const view = `
     <div class="Header-main">
@@ -10,7 +12,7 @@ const Header = () => {
       </div>
       <div class="Header-nav">
         <a target="_blank"  href="https://github.com/jorgeromero17/rick-morty.git">
-          <img src="/svgs/github.svg" alt="github" width="30px">
+          <img src="${githubIcon}" alt="github" width="30px">
         </a>
       </div>
     </div>
